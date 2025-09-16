@@ -1,0 +1,98 @@
+
+
+Day 1:
+
+VSC ~ version control system
+
+~ Track the source code (snapshots)
+    ~ Local VCS
+        ~ used for solo work
+    ~ Centrailized VCS
+        ~ used for multiple user
+        ~ connected through LAN (Local Area Network) ~ considered as a server
+    ~ Distributed VCS (mostly used)
+        ~ used for Global work (eg: git)
+
+"git" completely works using commands(no GUI)
+
+"GitHub" is used for storing the data (cloud based application / open source)
+    ~ repo
+        ~ public: access to all
+        ~ private: access to user himself
+
+install "git" on console, not minTTY in windows
+restart you cmd(command prompt)
+
+
+configuration in git:
+    ~ local config
+    ~ global config (mostly used)
+
+    > git config 
+        ~ --global (mostly used)
+        ~ --system
+        ~ --local
+
+    > git config --list
+    > git config --global user.name "your name"
+    > git config --global user.email "your emali"
+
+    > git config --global --replace-all user.name "your name"
+
+
+Initialization the repo here
+    > git init
+        ~ used to create local repo for VCS
+
+    > git status
+        ~ show the branch, commits, tracked and Untracked files
+
+    > git add <file-name> / git add .
+        ~ staging - used to track the files
+
+    > git commit -m "your message"
+        ~ commit always creates a new version(commit ID)
+    
+    > git log
+        ~ show all the commits 
+        
+Day 2:
+
+> echo <message>
+
+> echo <message> > <file-name>
+    ~ replacing all content
+
+> echo <message> >> <file-name>
+    ~ appending to existed content
+
+> git log --oneline
+    ~ shows only commitId and commit message
+
+
+git reset:
+    ~ only one snapshot(version) be rolled back
+
+    > git reset --soft HEAD~1
+        ~ only commit will be deleted, data won't be changed
+        ~ data stays staged
+
+    > git reset HEAD~1
+        ~ commit will be deleted
+        ~ data will be unstaged
+
+    > git reset --hard HEAD~1
+        ~ commit and data will be lost (cant recover the version)
+
+git revert:
+    ~ takes data from the previous snap and create a new commit from them
+
+
+
+
+
+
+
+
+
+
