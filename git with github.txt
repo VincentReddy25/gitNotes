@@ -29,9 +29,9 @@ configuration in git:
     ~ global config (mostly used)
 
     > git config 
-        ~ --global (mostly used)
-        ~ --system
-        ~ --local
+        ~ --local (less access, 1 user, 1 repo)
+        ~ --global (mostly used, 1 repo all users)
+        ~ --system (more access, all repos all users)
 
     > git config --list
     > git config --global user.name "your name"
@@ -88,6 +88,31 @@ git revert:
     ~ takes data from the previous snap and create a new commit from them
 
 
+
+
+Day 3:
+
+Branching using GitHub: 
+
+    ~ create github account
+
+    ~ login github
+
+    ~ create git repo (private)
+
+    ~ url copy local repo
+
+    ~ connect local to remote
+        > git remote add origin <url>
+
+    ~ create branch main
+        > git branch -M main
+
+    ~ send the data to main 
+        > git push -u origin main
+            ~ -u for --save-upstream (connect to )
+
+    ~ auth to github and local git(browser login or token - pat)
 
 
 
