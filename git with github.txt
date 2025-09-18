@@ -4,14 +4,14 @@ Day 1:
 
 VSC ~ version control system
 
-~ Track the source code (snapshots)
-    ~ Local VCS
+~ track the source code (snapshots)
+    ~ local VCS
         ~ used for solo work
-    ~ Centrailized VCS
+    ~ centrailized VCS
         ~ used for multiple user
         ~ connected through LAN (Local Area Network) ~ considered as a server
-    ~ Distributed VCS (mostly used)
-        ~ used for Global work (eg: git)
+    ~ distributed VCS (mostly used)
+        ~ used for global work (eg: git)
 
 "git" completely works using commands(no GUI)
 
@@ -24,7 +24,7 @@ install "git" on console, not minTTY in windows
 restart you cmd(command prompt)
 
 
-configuration in git:
+Configuration in "git":
     ~ local config
     ~ global config (mostly used)
 
@@ -92,7 +92,7 @@ git revert:
 
 Day 3:
 
-Branching using GitHub: 
+Setup GitHub: 
 
     ~ create github account
 
@@ -110,14 +110,52 @@ Branching using GitHub:
 
     ~ send the data to main 
         > git push -u origin main
-            ~ -u for --save-upstream (connect to )
+            ~ -u for --save-upstream (connect local to remote )
 
-    ~ auth to github and local git(browser login or token - pat)
-
-
+    ~ auth to github and local git(browser login or token - pat[public access token])
 
 
 
+Day 4: 
 
+Branching 
 
+    ~ create a branch
+        > git branch <name>
+
+    ~ check branchs
+        > git branch
+    
+    ~ rename branch
+        > git branch -M <name>
+
+    ~ switch branch (older)
+        > git checkout <name>
+    
+    ~ switch branch (newer)
+        > git switch <name>
+
+    ~ merge branch
+        > git merge <name>
+
+    ~ remove branch
+        > git branch -d <name> 
+
+    conflicts in branching:
+        ~ merging 
+            error: 
+                ~ branchs: main, b1, b2
+                ~ b1 - message of b1
+                ~ b2 - message of b2
+                ~ b1 added to main
+                ~ b2 added to main (auto conflict raised - no auto merging)
+                ~ both b1 and b2 data added to main
+
+            solution #1:
+                ~ merging b1 to b2, b2 to main
+            solution #2:
+                ~ pull and push
+
+    (task #1):
+        ~ using pull
 
