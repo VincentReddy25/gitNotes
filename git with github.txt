@@ -143,6 +143,8 @@ Branching
 
     conflicts in branching:
         ~ merging 
+            Merge conflict 
+                ~ 2 users same repo
             error: 
                 ~ branchs: main, b1, b2
                 ~ b1 - message of b1
@@ -159,3 +161,14 @@ Branching
     (task #1):
         ~ using pull
 
+
+
+Day 5:
+    
+    (task #2):
+        ~ login auth project (local)
+        ~ 2 devs collabe - login / signup
+        ~ 1 create repo, 1 collab with it
+        ~ pull, edit, push, repeat
+        ~ if done - forgot password(new feature)
+        ~ finally learn collab
