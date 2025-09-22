@@ -2,164 +2,164 @@
 
 Day 1:
 
-VSC ~ version control system
+    VSC ~ version control system
 
-~ track the source code (snapshots)
-    ~ local VCS
-        ~ used for solo work
-    ~ centrailized VCS
-        ~ used for multiple user
-        ~ connected through LAN (Local Area Network) ~ considered as a server
-    ~ distributed VCS (mostly used)
-        ~ used for global work (eg: git)
+    ~ track the source code (snapshots)
+        ~ local VCS
+            ~ used for solo work
+        ~ centrailized VCS
+            ~ used for multiple user
+            ~ connected through LAN (Local Area Network) ~ considered as a server
+        ~ distributed VCS (mostly used)
+            ~ used for global work (eg: git)
 
-"git" completely works using commands(no GUI)
+    "git" completely works using commands(no GUI)
 
-"GitHub" is used for storing the data (cloud based application / open source)
-    ~ repo
-        ~ public: access to all
-        ~ private: access to user himself
+    "GitHub" is used for storing the data (cloud based application / open source)
+        ~ repo
+            ~ public: access to all
+            ~ private: access to user himself
 
-install "git" on console, not minTTY in windows
-restart you cmd(command prompt)
-
-
-Configuration in "git":
-    ~ local config
-    ~ global config (mostly used)
-
-    > git config 
-        ~ --local (less access, 1 user, 1 repo)
-        ~ --global (mostly used, 1 repo all users)
-        ~ --system (more access, all repos all users)
-
-    > git config --list
-    > git config --global user.name "your name"
-    > git config --global user.email "your emali"
-
-    > git config --global --replace-all user.name "your name"
+    install "git" on console, not minTTY in windows
+    restart you cmd(command prompt)
 
 
-Initialization the repo here
-    > git init
-        ~ used to create local repo for VCS
+    Configuration in "git":
+        ~ local config
+        ~ global config (mostly used)
 
-    > git status
-        ~ show the branch, commits, tracked and Untracked files
+        > git config 
+            ~ --local (less access, 1 user, 1 repo)
+            ~ --global (mostly used, 1 repo all users)
+            ~ --system (more access, all repos all users)
 
-    > git add <file-name> / git add .
-        ~ staging - used to track the files
+        > git config --list
+        > git config --global user.name "your name"
+        > git config --global user.email "your emali"
 
-    > git commit -m "your message"
-        ~ commit always creates a new version(commit ID)
-    
-    > git log
-        ~ show all the commits 
+        > git config --global --replace-all user.name "your name"
+
+
+    Initialization the repo here
+        > git init
+            ~ used to create local repo for VCS
+
+        > git status
+            ~ show the branch, commits, tracked and Untracked files
+
+        > git add <file-name> / git add .
+            ~ staging - used to track the files
+
+        > git commit -m "your message"
+            ~ commit always creates a new version(commit ID)
         
+        > git log
+            ~ show all the commits 
+            
 Day 2:
 
-> echo <message>
+    > echo <message>
 
-> echo <message> > <file-name>
-    ~ replacing all content
+    > echo <message> > <file-name>
+        ~ replacing all content
 
-> echo <message> >> <file-name>
-    ~ appending to existed content
+    > echo <message> >> <file-name>
+        ~ appending to existed content
 
-> git log --oneline
-    ~ shows only commitId and commit message
+    > git log --oneline
+        ~ shows only commitId and commit message
 
 
-git reset:
-    ~ only one snapshot(version) be rolled back
+    git reset (danger):
+        ~ only one snapshot(version) be rolled back
 
-    > git reset --soft HEAD~1
-        ~ only commit will be deleted, data won't be changed
-        ~ data stays staged
+        > git reset --soft HEAD~1
+            ~ only commit will be deleted, data won't be changed
+            ~ data stays staged
 
-    > git reset HEAD~1
-        ~ commit will be deleted
-        ~ data will be unstaged
+        > git reset HEAD~1
+            ~ commit will be deleted
+            ~ data will be unstaged
 
-    > git reset --hard HEAD~1
-        ~ commit and data will be lost (cant recover the version)
+        > git reset --hard HEAD~1
+            ~ commit and data will be lost (cant recover the version)
 
-git revert:
-    ~ takes data from the previous snap and create a new commit from them
+    git revert:
+        ~ takes data from the previous snap and create a new commit from them
 
 
 
 
 Day 3:
 
-Setup GitHub: 
+    Setup GitHub: 
 
-    ~ create github account
+        ~ create github account
 
-    ~ login github
+        ~ login github
 
-    ~ create git repo (private)
+        ~ create git repo (private)
 
-    ~ url copy local repo
+        ~ url copy local repo
 
-    ~ connect local to remote
-        > git remote add origin <url>
+        ~ connect local to remote
+            > git remote add origin <url>
 
-    ~ create branch main
-        > git branch -M main
+        ~ create branch main`
+            > git branch -M main
 
-    ~ send the data to main 
-        > git push -u origin main
-            ~ -u for --save-upstream (connect local to remote )
+        ~ send the data to main 
+            > git push -u origin main
+                ~ -u for --save-upstream (connect local to remote )
 
-    ~ auth to github and local git(browser login or token - pat[public access token])
+        ~ auth to github and local git(browser login or token - pat[public access token])
 
 
 
 Day 4: 
 
-Branching 
+    Branching 
 
-    ~ create a branch
-        > git branch <name>
+        ~ create a branch
+            > git branch <name>
 
-    ~ check branchs
-        > git branch
-    
-    ~ rename branch
-        > git branch -M <name>
+        ~ check branchs
+            > git branch
+        
+        ~ rename branch
+            > git branch -M <name>
 
-    ~ switch branch (older)
-        > git checkout <name>
-    
-    ~ switch branch (newer)
-        > git switch <name>
+        ~ switch branch (older)
+            > git checkout <name>
+        
+        ~ switch branch (newer)
+            > git switch <name>
 
-    ~ merge branch
-        > git merge <name>
+        ~ merge branch
+            > git merge <name>
 
-    ~ remove branch
-        > git branch -d <name> 
+        ~ remove branch
+            > git branch -d <name> 
 
-    conflicts in branching:
-        ~ merging 
-            Merge conflict 
-                ~ 2 users same repo
-            error: 
-                ~ branchs: main, b1, b2
-                ~ b1 - message of b1
-                ~ b2 - message of b2
-                ~ b1 added to main
-                ~ b2 added to main (auto conflict raised - no auto merging)
-                ~ both b1 and b2 data added to main
+        conflicts in branching:
+            ~ merging 
+                Merge conflict 
+                    ~ 2 users same repo
+                error: 
+                    ~ branchs: main, b1, b2
+                    ~ b1 - message of b1
+                    ~ b2 - message of b2
+                    ~ b1 added to main
+                    ~ b2 added to main (auto conflict raised - no auto merging)
+                    ~ both b1 and b2 data added to main
 
-            solution #1:
-                ~ merging b1 to b2, b2 to main
-            solution #2:
-                ~ pull and push
+                solution #1:
+                    ~ merging b1 to b2, b2 to main
+                solution #2:
+                    ~ pull and push
 
-    (task #1):
-        ~ using pull
+        (task #1):
+            ~ using pull
 
 
 
@@ -172,3 +172,34 @@ Day 5:
         ~ pull, edit, push, repeat
         ~ if done - forgot password(new feature)
         ~ finally learn collab
+
+Day 6:
+
+    ~ revert (safe undo): 
+        ~ revert
+            > git revert <commit-ID>
+        
+        ~ skip
+            > git revert --skip
+
+        ~ abort
+            > git revert --abort
+
+        ~ continue
+            > git rm <file-name>
+            > git revert --continue
+
+    ~ diff:
+
+        ~ see the difference between current file and previous version
+            > git diff <commit-ID>
+
+        ~ show only staged 
+            > git diff --staged <commit-ID>
+
+        ~ see difference between 2 commits
+            > git diff <commit-ID> <commit-ID>
+    
+        ~ difference between branches
+            > git diff <branch> <branch>
+
