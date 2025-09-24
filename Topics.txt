@@ -1,0 +1,39 @@
+Git Training – Topics Covered
+
+Day 1:
+• Introduction to Version Control Systems (Local, Centralized, Distributed)
+• Git vs GitHub
+• Git installation & configuration (local, global, system)
+• Repository initialization (git init)
+• Basic commands: git status, git add, git commit, git log
+
+Day 2:
+• File operations using echo
+• Commit history (git log –oneline)
+• Reset types: soft, mixed, hard
+• Revert vs Reset
+
+Day 3:
+• GitHub setup (account, repo creation, authentication)
+• Connecting local repo to remote (git remote add)
+• Branch setup (main)
+• Pushing code to GitHub (git push -u origin main)
+• Cloning repositories (git clone)
+• Fetching updates from remote (git fetch)
+• Merging branches (git merge)
+• Pulling updates and combining with local changes (git pull)
+
+Day 4:
+• Branching concepts
+• Creating, switching, renaming, deleting branches
+• Merging branches
+• Merge conflicts and resolution strategies (pull/merge workflows)
+
+Day 5:
+• Collaboration exercise (login/signup project)
+• Pull, edit, push cycle with multiple developers
+• Adding new features collaboratively
+
+Day 6:
+• Safe undo with git revert (skip, abort, continue)
+• Git diff commands: comparing commits, staged changes, and branches
